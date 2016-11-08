@@ -1,0 +1,50 @@
+void main()
+{
+	int n = 454;
+	cout << n << endl;
+	cout << 1000000001 << endl;
+	int prime = 0;
+	int _integer = 0;
+	int original = n;
+	int two = 0;
+	while (n % 2 == 0)
+		{
+			cout << 2;
+			n /= 2;
+			//two += 1;
+		}
+	int i = 3;
+	while (i <= n)
+	{
+		while (n%i == 0)
+		{
+			if (i != original){
+				cout << i << endl;
+			}
+			n /= i;
+		}
+		i += 2;
+	}
+	if (i > original) {
+		cout << (0-1) << endl;
+		prime = 1;
+	}
+	if (prime != 1){
+		cout << 1000000001 << endl;
+	}
+	
+		n = original;
+		if ((n % 2) == 0){
+			n += 1;
+		}
+		i = 3;
+		while (i < n) {
+			if (((n%i) == 0) && (i != n) ) {
+				n += 2;
+				i = 3;
+			}
+			i += 2;
+		}
+		prime = 1;
+		cout << n << endl;
+} //eof
